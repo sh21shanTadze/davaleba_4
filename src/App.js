@@ -4,13 +4,21 @@ import Home from './component/Home';
 import About from './component/About';
 import Users from './component/Users';
 import ErrorBoundary from './component/ErrorBoundary';
+import ClickConter from './component/ClickCounter';
+import HoverConuter from './component/HoverCounter';
 
 function App() {
     return (
         <Router>
-            <div>
+            <div className="App">
                 <nav>
                     <ul>
+                        <li>
+                            <Link to="/">ClickConter</Link>
+                        </li>
+                        <li>
+                            <Link to="/">HoverConuter</Link>
+                        </li>
                         <li>
                             <Link to="/">Home</Link>
                         </li>
@@ -26,6 +34,13 @@ function App() {
                 {/* A <Switch> looks through its children <Route>s and
               renders the first one that matches the current URL. */}
                 <Switch>
+                    <Route path="/ClickConter">
+                        <ClickConter />
+                    </Route>
+                    <Route path="/HoverConuter">
+                        <HoverConuter />
+                    </Route>
+
                     <Route path="/about">
                         <About name="Shavleg" />
                     </Route>
