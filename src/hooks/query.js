@@ -1,1 +1,2 @@
-export default () => new URLSearchParams(window.location.search);
+const useQuery = () => new URLSearchParams(window.location.search);
+export default useQuery;
