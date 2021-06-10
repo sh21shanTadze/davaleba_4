@@ -1,6 +1,6 @@
-import React, { component } from 'react';
+import React, { Component } from 'react';
 
-class ClickConter extends component {
+class ClickConter extends Component {
     constructor(props) {
         super(props);
 

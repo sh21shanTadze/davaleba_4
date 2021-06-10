@@ -1,6 +1,6 @@
-import React, { component } from 'react';
+import React, { Component } from 'react';
 
-class HoverConuter extends component {
+class HoverConuter extends Component {
     constructor(props) {
         super(props);
 
@@ -13,9 +13,12 @@ class HoverConuter extends component {
             return { count: prevState.count + 1 };
         });
     };
+
     render() {
         const { count } = this.state;
-        return <h2 onMiuseOver={this.incrementCount}>Hoverd {count} time</h2>;
+        return (
+            <h2 onMouseUpCapture={this.incrementCount}>Hoverd {count} time</h2>
+        );
     }
 }
 export default HoverConuter;

@@ -1,0 +1,10 @@
+.button {
+    background-color: orange;
+    padding: 25px 80px;
+    cursor: pointer;
+    border: none;
+}
+.clicked {
+    background-color: green;
+}
+/*  */

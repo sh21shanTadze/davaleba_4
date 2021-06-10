@@ -6,19 +6,16 @@ import Users from './component/Users';
 import ErrorBoundary from './component/ErrorBoundary';
 import ClickConter from './component/ClickCounter';
 import HoverConuter from './component/HoverCounter';
+import FormComponent from './component/form';
 
 function App() {
     return (
         <Router>
             <div className="App">
+                <ClickConter />
+                <HoverConuter />
                 <nav>
                     <ul>
-                        <li>
-                            <Link to="/">ClickConter</Link>
-                        </li>
-                        <li>
-                            <Link to="/">HoverConuter</Link>
-                        </li>
                         <li>
                             <Link to="/">Home</Link>
                         </li>
@@ -26,7 +23,7 @@ function App() {
                             <Link to="/about">About</Link>
                         </li>
                         <li>
-                            <Link to="/users">Users</Link>
+                            <Link to="/Users">Users</Link>
                         </li>
                     </ul>
                 </nav>
@@ -34,18 +31,14 @@ function App() {
                 {/* A <Switch> looks through its children <Route>s and
               renders the first one that matches the current URL. */}
                 <Switch>
-                    <Route path="/ClickConter">
-                        <ClickConter />
-                    </Route>
-                    <Route path="/HoverConuter">
-                        <HoverConuter />
-                    </Route>
-
                     <Route path="/about">
                         <About name="Shavleg" />
                     </Route>
                     <Route path="/users">
                         <Users />
+                    </Route>
+                    <Route path="/form">
+                        <FormComponent />
                     </Route>
                     <Route path="/">
                         <ErrorBoundary>
